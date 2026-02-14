@@ -1,0 +1,324 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: font1;
+    src: url(fonts/CruyffSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(fonts/CruyffSans-Light.ttf);
+}
+
+body {
+  background-color: #081031;
+  color: white;
+  font-family: font2, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navigation {
+  background-color: white;
+  height: 70px;
+}
+
+.nav-links {
+    float: right;
+    padding-top: 24px;
+    padding-right: 40px;
+}
+
+.nav-links a {
+    margin: 0 10px;
+}
+
+.logo {
+    float: left;
+    padding-top: 18px;
+    padding-left: 40px;
+    font-size: 25px;
+}
+
+.nav-links a {
+	color: black;
+	font-size: 15px;
+	transition: color 0.3s ease, transform 0.3s ease;
+	display: inline-block;
+}
+
+.nav-links a:hover {
+	color: #ff7200;
+	transform: scale(1.15);
+}
+
+.hero-gif img {
+    max-width: 800px;
+    max-height: 800px;
+    float: right;
+
+      mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 30%,
+    black 100%);
+}
+
+.hero-text h1,
+.hero-text h2 {
+  display: block;
+  font-family: font2;
+  font-weight: lighter;
+}
+
+.hero-text h1 {
+    margin-top: 110px;
+    margin-left: 150px;
+    font-size: 100px;
+}
+
+.hero-text h2 {
+    margin-left: 157px;
+}
+
+.banner {
+    display:flex;
+    justify-content: space-between;
+}
+
+.about {
+    background-color: #030a20;
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.about h3 {
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto 18px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.prelaz1 {
+  height: 300px;
+
+  background-image: url(images/herrera-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prelaz1 h4 {
+  color: white;
+  font-family: font2;
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-weight: lighter;
+  mix-blend-mode: difference;
+}
+
+.slider {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+}
+
+.track img {
+  height: 500px;
+  width: auto;
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+  
+}
+
+.herrera {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+
+.editorial {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.armani {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.three-images {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.three-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.landscape {
+  aspect-ratio: 4 / 3;
+}
+
+.three-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.three-images img:hover {
+  transform: scale(1.05); 
+}
+
+.watch-grid {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.image-grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image-grid-2x2 img {
+  width: 100%;
+  aspect-ratio: 4 / 3; 
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.image-grid-2x2 img:hover {
+  transform: scale(1.04);
+}
+
+.rosefield {
+  text-align: center;
+  margin-bottom: 50px;
+ 
+}
+
+
+
+
+.forma {
+	display: flex;
+	flex-direction: column;
+	align-items: center;    
+	min-height: 100vh;
+	text-align: center;
+
+    background-size: cover;
+}
+
+.forma h1 {
+	margin-bottom: 40px;
+    margin-top: 80px;
+	font-family: font1;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+.forma form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+label, input, select, textarea {
+	display: block;
+	text-align: center;
+
+}
+
+input, select {
+	width: 60%;
+	padding: 10px;
+    font-size: 15px;
+}
+
+textarea {
+	width: 60%;
+	padding: 10px;
+    font-size: 15px;
+	box-sizing: border-box;
+	resize: none;
+	margin-top: 50px;
+}
+
+input[type="submit"] {
+	margin-top: 50px;
+    margin-bottom: 80px;
+	width: 20%;
+	padding: 10px 30px;
+	border: 1px solid white;
+	background-color: white;
+	color: black;
+	transition: 0.5s;
+}
+
+input[type="submit"]:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+
+label {
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+footer {
+    background-color: white;
+	color: black;
+	text-align: center;
+	padding: 20px;
+}
+
